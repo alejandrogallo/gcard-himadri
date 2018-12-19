@@ -1,0 +1,35 @@
+% minimalist greeting card document using gcard package
+% Sets text in 12 pt CMR (not exactly traditional for cards!)
+% G. C. McBane  21 May 2007
+\documentclass[12 pt]{article}
+\usepackage{gcard}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{frontcover}
+  \tikz[remember picture, overlay]
+    \node[xscale=-1, inner sep=0pt] at (0,0) {
+      \includegraphics[width=2.3\textwidth]{images/vienna.jpg}
+    };
+\end{frontcover}
+
+\begin{insideright}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{images/Star_Trek_Live_Long_Sticker_POP.jpg}
+  \end{center}
+\end{insideright}
+
+\begin{insideleft}
+  Dear Himadri!\\
+
+  All the \textit{Gr\"uneis} group wishes you much success and luck in
+  in your new adventure in London.\\
+
+  We all enjoyed very much discussing with you about politics, science and
+  nonsense.\\
+
+\end{insideleft}
+
+\end{document}
